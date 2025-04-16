@@ -1,5 +1,6 @@
 import "./catImages.css"
-function CatImg({url}) {
+
+export function CatImg({url}) {
     
     return (
         <div className="cat-card" >
@@ -8,4 +9,3 @@ function CatImg({url}) {
     )
 }
 
-export default CatImg

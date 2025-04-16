@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { CatImg } from "./components/catImagesGallery/catImages";
 import { RandomUserFetcher } from "./components/randomUserFetcher/randomUserFetcher";
@@ -9,21 +10,20 @@ function App() {
     setCatImages([]);
   };
 
-  const fetchCatImages = () => {
-    fetch(`https://api.thecatapi.com/v1/images/search?limit=10`)
+  function fetchCatImages() {
+    fetch("https://api.thecatapi.com/v1/images/search?limit=10")
       .then((response) => response.json())
-      .then((data) => {
-        const catImageUrl = data.map((cat) => cat.url);
-        setCatImages(catImageUrl);
-      });
-  };
+      .then((data) => setCatImages(data))
+      .catch(console.error());
+  }
 
   return (
     <>
       <DynamicCounter />
-
+      <br />
       <RandomUserFetcher />
-
+      <br />
+      <br />
       <div className="div-show">
         <button onClick={fetchCatImages}>Fetch Cat Images</button>
         {catImages.length > 0 && <button onClick={resetButton}>Clear</button>}

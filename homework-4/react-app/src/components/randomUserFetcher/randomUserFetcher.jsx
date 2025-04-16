@@ -22,7 +22,7 @@ export function RandomUserFetcher() {
 
   return (
     <div className="user-container">
-      <button onClick={newRandomUser}>Show random user</button>
+      <button onClick={newRandomUser} style={{backgroundColor: "rgb(75, 100, 75)"}}>Show random user</button>
 
       {user ? (
         <div className="user-div">
