@@ -1,6 +1,7 @@
 
 import './App.css'
-import { Parent } from './components/FamilyTree/parent'
+import Parent from './components/FamilyTree/parent'
+
 import { ListItem } from './components/listItem/listItem'
 import UserProfileClass from './components/userProfile/userProfileClass'
 import { UserProfileFunction } from './components/userProfile/userProfileFunction'

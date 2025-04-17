@@ -12,7 +12,7 @@ export function ListItem () {
             <ul>
                 <h2>Tasks list:</h2>
                 {tasks.map((item,index) => (
-                    <li key={index}>
+                    <li key={index} >
                         <p>Task Name: {item.name}</p>
                         <p>Priority: {item.priority}</p>
                     </li>

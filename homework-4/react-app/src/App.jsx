@@ -14,7 +14,7 @@ function App() {
     fetch("https://api.thecatapi.com/v1/images/search?limit=10")
       .then((response) => response.json())
       .then((data) => setCatImages(data))
-      .catch(console.error());
+      .catch(console.error())
   }
 
   return (

@@ -4,7 +4,7 @@ export function CatImg({url}) {
     
     return (
         <div className="cat-card" >
-            <img src={url} alt="CatImg" />
+            <img src={url.url} alt="CatImg" />
         </div>
     )
 }
